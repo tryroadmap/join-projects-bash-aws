@@ -1,15 +1,15 @@
 #!/bin/bash
 # Volume list file will have volume-id:Volume-name format
-VOLUMES_LIST = /var/log/volumes-list
-SNAPSHOT_INFO = /var/log/snapshot_info
-DATE = `date +%Y-%m-%d`
+VOLUMES_LIST=/var/log/volumes-list
+SNAPSHOT_INFO=/var/log/snapshot_info
+DATE=`date +%Y-%m-%d`
 
-REGION = "eu-west-1"
+REGION="eu-west-1"
 # Snapshots Retention Period for each volume snapshot
 RETENTION=6
-SNAP_CREATION = /var/log/snap_creation
-SNAP_DELETION = /var/log/snap_deletion
-EMAIL_LIST = abc@domain.com
+SNAP_CREATION=/var/log/snap_creation
+SNAP_DELETION=/var/log/snap_deletion
+EMAIL_LIST=abc@domain.com
 echo "List of Snapshots Creation Status" > $SNAP_CREATION
 echo "List of Snapshots Deletion Status" > $SNAP_DELETION
 # Check whether the volumes list file is available or not?
@@ -26,8 +26,7 @@ DESCRIPTION = "${VOL_NAME}_${DATE}"
 "$DESCRIPTION" --region $REGION &>> $SNAP_CREATION
 done
 else
-echo "Volumes list file is not available : $VOLUMES_LIST Exiting." | mail -s
-"Snapshots Creation Status" $EMAIL_LIST
+echo "Volumes list file is not available : $VOLUMES_LIST Exiting." | mail -s "Snapshots Creation Status" $EMAIL_LIST
 exit 1
 fi
 echo >> $SNAP_CREATION

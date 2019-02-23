@@ -20,3 +20,4 @@ FYI
 * from IAM remove one of the key pairs for user star.
 * create a new key pair. Write down secrete key in a safe place. You can't reach Secret Key ever again.
 
+![email confirmation sns for sqs batch job](https://ibb.co/K51V2nq)

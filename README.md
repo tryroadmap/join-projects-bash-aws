@@ -7,6 +7,9 @@ Need to fix email input.
 ```
 cd ~
 cd aws_expert
+
+sudo apt-get update
+sudo apt-get install mailutils
 ./snapshot2bash.sh
 
 ```

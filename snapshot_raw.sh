@@ -9,7 +9,7 @@ REGION="eu-west-1"
 RETENTION=6
 SNAP_CREATION=/var/log/snap_creation
 SNAP_DELETION=/var/log/snap_deletion
-EMAIL_LIST=abc@domain.com
+EMAIL_LIST=support@xphilly.com
 echo "List of Snapshots Creation Status" > $SNAP_CREATION
 echo "List of Snapshots Deletion Status" > $SNAP_DELETION
 # Check whether the volumes list file is available or not?

@@ -1,0 +1,6 @@
+{
+    "key_of_source_pdf": "String Value from S3 in/",
+    "key_of_dest_s3_folder": "String Value from S3 out/"
+   
+}
+

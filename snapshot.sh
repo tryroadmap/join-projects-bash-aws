@@ -5,6 +5,13 @@ SNAPSHOT_INFO=/var/log/snapshot_info
 DATE=`date +%Y-%m-%d`
 
 REGION="eu-west-1"
+
+# Create SQS Queue
+aws sqs create-queue --queue-name MyQueue
+
+aws sqs send-message --queue-url https://queue.amazonaws.com/613778720632/MyQueue --message-body "Keys and Values Information" --delay-seconds 10 --message-attributes file://submit-via-sqs.json
+
+
 # Snapshots Retention Period for each volume snapshot
 RETENTION=6
 SNAP_CREATION=/var/log/snap_creation

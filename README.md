@@ -6,11 +6,12 @@ Need to fix email input.
 
 ```
 cd ~
-cd aws_expert
+git clone https://github.com/lotusxai/temp_aws_expert.git
+cd temp_aws_expert
 
 sudo apt-get update
 sudo apt-get install mailutils
-sudo ./snapshot.sh
+sudo ./run.sh
 
 ```
 
